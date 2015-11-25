@@ -6,6 +6,10 @@ ja:
     attributes:
       sale:
         radio_value: "ラジオ値"  #g
-        toggle_flag_1: "トグルフラグ1"  #g
-        toggle_flag_2: "トグルフラグ2"  #g
-        toggle_flag_3: "トグルフラグ3"  #g
+        toggle_flag_1: "データ通信端末 料金・割引プラン"  #g
+        toggle_flag_2: "デジタルフォトフレーム 料金・割引プラン"  #g
+        toggle_flag_3: "安心GPS 料金・割引プラン"  #g
+
+  radio_value_1: "カケホーダイ" #g
+  radio_value_2: "パケあえる" #g
+  radio_value_3: "メール使いホーダイ" #g

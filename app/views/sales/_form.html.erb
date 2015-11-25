@@ -2,7 +2,12 @@
   <%= f.error_notification %>
 
   <div class="form-inputs">
-    <%= f.input :radio_value %>
+    <%= f.collection_radio_buttons(:radio_value,
+                                   [[1, t('radio_value_1')],
+                                    [2, t('radio_value_2')],
+                                    [3, t('radio_value_3')]],
+                                   :first, :last) %>
+
     <%= f.input :toggle_flag_1 %>
     <%= f.input :toggle_flag_2 %>
     <%= f.input :toggle_flag_3 %>
