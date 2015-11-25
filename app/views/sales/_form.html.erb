@@ -1,5 +1,6 @@
 <%= simple_form_for @sale, :html => { :class => 'form-horizontal' } do |f| %>
   <div class="container">
+    <h3>ラジオボタン</h3>
     <%= f.collection_radio_buttons(:radio_value,
                                    [[1, t('radio_value_1')],
                                     [2, t('radio_value_2')],
@@ -9,9 +10,8 @@
 
     <%= error_span(@sale[:radio_value]) %>
 
-    <hr />
-
-    <div class="container btn-group" data-toggle="buttons">
+    <h3>トグルボタン</h3>
+    <div id="toggle_button" class="container btn-group" data-toggle="buttons">
       <%= f.input :toggle_flag_1, label_html: { class: 'btn btn-default' } %>
       <%= error_span(@sale[:toggle_flag_1]) %>
       <%= f.input :toggle_flag_2, label_html: { class: 'btn btn-default' } %>
@@ -19,6 +19,8 @@
       <%= f.input :toggle_flag_3, label_html: { class: 'btn btn-default' }  %>
       <%= error_span(@sale[:toggle_flag_3]) %>
     </div>
+
+    <%= f.input :toggle_flag_1, label_html: { class: 'btn btn-default' } %>
 
     <%= f.button :submit, :class => 'btn-primary' %>
     <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
