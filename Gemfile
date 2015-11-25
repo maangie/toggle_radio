@@ -42,6 +42,8 @@ gem 'twitter-bootstrap-rails'
 # Rails I18n de-facto standard library for ActiveRecord model/data translation.
 gem 'globalize'
 
+# Forms made easy for Rails! It's tied to a simple DSL, with no
+# opinion on markup.
 gem 'simple_form'
 
 group :development, :test do
