@@ -1,19 +1,27 @@
-<%= simple_form_for(@sale) do |f| %>
-  <%= f.error_notification %>
-
-  <div class="form-inputs">
+<%= simple_form_for @sale, :html => { :class => 'form-horizontal' } do |f| %>
+  <div class="container">
     <%= f.collection_radio_buttons(:radio_value,
                                    [[1, t('radio_value_1')],
                                     [2, t('radio_value_2')],
                                     [3, t('radio_value_3')]],
-                                   :first, :last) %>
+                                   :first, :last,
+                                   item_wrapper_class: 'radio') %>
 
-    <%= f.input :toggle_flag_1 %>
-    <%= f.input :toggle_flag_2 %>
-    <%= f.input :toggle_flag_3 %>
-  </div>
+    <%= error_span(@sale[:radio_value]) %>
 
-  <div class="form-actions">
-    <%= f.button :submit %>
+    <hr />
+
+    <div class="container btn-group" data-toggle="buttons">
+      <%= f.input :toggle_flag_1, label_html: { class: 'btn btn-default' } %>
+      <%= error_span(@sale[:toggle_flag_1]) %>
+      <%= f.input :toggle_flag_2, label_html: { class: 'btn btn-default' } %>
+      <%= error_span(@sale[:toggle_flag_2]) %>
+      <%= f.input :toggle_flag_3, label_html: { class: 'btn btn-default' }  %>
+      <%= error_span(@sale[:toggle_flag_3]) %>
+    </div>
+
+    <%= f.button :submit, :class => 'btn-primary' %>
+    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+      sales_path, :class => 'btn btn-default' %>
   </div>
 <% end %>

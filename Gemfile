@@ -37,6 +37,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # gem 'capistrano-rails', group: :development
 
 # Twitter Bootstrap for Rails 3.x - 4 Asset Pipeline
+gem 'less-rails'
 gem 'twitter-bootstrap-rails'
 
 # Rails I18n de-facto standard library for ActiveRecord model/data translation.
@@ -51,9 +52,11 @@ gem 'i18n_generators'
 gem 'simple_form'
 
 group :development, :test do
-  # Call 'byebug' anywhere in the code to stop execution and get a
-  # debugger console
-  gem 'byebug'
+  # An IRB alternative and runtime developer console
+  gem 'pry-rails'
+  gem 'pry-doc'
+  gem 'pry-stack_explorer'
+  gem 'pry-byebug'
 end
 
 group :development do
