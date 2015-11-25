@@ -20,12 +20,6 @@
       <%= error_span(@sale[:toggle_flag_3]) %>
     </div>
 
-    <p>
-      <label>
-        <%= check_box_tag nil, nil, class: 'brassy-toggle-button' %>その他
-      </label>
-    </p>
-
     <%= f.button :submit, :class => 'btn-primary' %>
     <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
       sales_path, :class => 'btn btn-default' %>
