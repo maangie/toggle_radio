@@ -1,0 +1,11 @@
+ja:
+  activerecord:
+    models:
+      sale: "販売"  #g
+
+    attributes:
+      sale:
+        radio_value: "ラジオ値"  #g
+        toggle_flag_1: "トグルフラグ1"  #g
+        toggle_flag_2: "トグルフラグ2"  #g
+        toggle_flag_3: "トグルフラグ3"  #g

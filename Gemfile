@@ -42,6 +42,10 @@ gem 'twitter-bootstrap-rails'
 # Rails I18n de-facto standard library for ActiveRecord model/data translation.
 gem 'globalize'
 
+# A pack of Rails generators gem plugin that generates Rails 3 and
+# Rails 2 I18n locale files for almost every known locale.
+gem 'i18n_generators'
+
 # Forms made easy for Rails! It's tied to a simple DSL, with no
 # opinion on markup.
 gem 'simple_form'
