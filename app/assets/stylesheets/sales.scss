@@ -9,3 +9,8 @@
 div#toggle_button .boolean {
   clip: rect(0, 0, 0, 0);
 }
+
+label.btn:hover:not(.active)
+{
+    background-color: transparent;
+}
